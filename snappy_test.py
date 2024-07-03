@@ -12,7 +12,7 @@ def decompress_numpy_array(compressed_data, dtype, shape):
     return arr
 
 if __name__ == "__main__":
-    large_array = np.random.randint(0, 1000, size=(10000, 10000), dtype=np.int32)
+    large_array = np.random.randint(350, 550, size=(480, 640), dtype=np.int32)
     
     # Compress the numpy array
     compressed_array = compress_numpy_array(large_array)

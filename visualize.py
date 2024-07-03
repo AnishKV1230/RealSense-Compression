@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 file_path1 = r'./Frame_000184.npy'
 
@@ -18,9 +19,9 @@ data3 = np.load(file_path3)
 
 clean3 = data3[~np.isnan(data3)]
 
-# Print the loaded data to verify
-print(clean1.max())
-print(clean2.max())
-print(clean3.max())
-
-
+plt.imshow(data3, cmap='viridis')
+plt.colorbar(label='Depth')
+plt.title('Depth Map')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.show()
